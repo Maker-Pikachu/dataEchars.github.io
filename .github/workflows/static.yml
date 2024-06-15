@@ -45,19 +45,19 @@ jobs:
         uses: actions/cache@v4.0.2
         with:
           # A list of files, directories, and wildcard patterns to cache and restore
-          path: 
+          path: '.'
           # An explicit key for restoring and saving the cache
-          key: 
+          key: 'yes'
           # An ordered list of keys to use for restoring stale cache if no cache hit occurred for key. Note `cache-hit` returns false in this case.
-          restore-keys: # optional
+          restore-keys: 'cache-hit'
           # The chunk size used to split up large files during upload, in bytes
-          upload-chunk-size: # optional
+          upload-chunk-size: 400
           # An optional boolean when enabled, allows windows runners to save or restore caches that can be restored or saved respectively on other platforms
-          enableCrossOsArchive: # optional, default is false
+          enableCrossOsArchive: true
           # Fail the workflow if cache entry is not found
-          fail-on-cache-miss: # optional, default is false
+          fail-on-cache-miss: true
           # Check if a cache entry exists for the given input(s) (key, restore-keys) without downloading the cache
-          lookup-only: # optional, default is false
+          lookup-only: true
           # Run the post step to save the cache even if another step before fails
-          save-always: # optional, default is false
+          save-always: true
                 
